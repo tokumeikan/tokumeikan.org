@@ -1,0 +1,39 @@
+{
+  "name": "dsmxweb",
+  "version": "1.0.0",
+  "description": "Tokumeikan Organization",
+  "main": "index.html",
+  "scripts": {
+    "clean": "rimraf public/*",
+    "prebuild": "npm run clean",
+    "assets:css": "ncp src/css public/css",
+    "assets:js": "ncp src/js public/js",
+    "assets:images": "ncp src/images public/images",
+    "assets:slick": "ncp src/slick public/slick",
+    "assets": "run-p assets:*",
+    "build:assets": "npm run assets",
+    "build:html": "ncp src/ public/ --filter=\".*(src|\\.html)$\"",
+    "build": "run-p build:*",
+    "deploy": "npx firebase deploy",
+    "test": "echo \"INFO: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tokumeikan/tokumeikan.org.git"
+  },
+  "author": "Dima Stelmakh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tokumeikan/tokumeikan.org/issues"
+  },
+  "homepage": "https://github.com/tokumeikan/tokumeikan.org#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "make-dir-cli": "^2.0.0",
+    "ncp": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
+  }
+}
