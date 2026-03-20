@@ -6,10 +6,14 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "headers": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "assets/**",
+        "headers": [
+          { "key": "Cache-Control", "value": "max-age=31536000, immutable" }
+        ]
       }
     ]
   }

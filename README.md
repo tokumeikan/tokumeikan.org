@@ -1,2 +1,0 @@
-# tokumeikan.org
-Primary website
