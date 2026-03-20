@@ -257,7 +257,7 @@ p:last-child { margin-bottom: 0; }
 /* Home hero */
 .home-hero {
   background: var(--ink);
-  min-height: 420px;
+  min-height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
